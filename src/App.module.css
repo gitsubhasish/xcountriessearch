@@ -1,0 +1,25 @@
+.gridContainer {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  padding: 10px;
+}
+.countryCard {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 5px;
+  height: 200px;
+  margin: 5px;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card_text {
+  font-size: 12px;
+  font-weight: 800;
+}
