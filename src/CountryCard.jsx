@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "./App.module.css";
+import "./App.css";
 
 function CountryCard({ cnt }) {
   return (
-    <div key={cnt.name.common} className={styles.countryCard}>
+    <div key={cnt.name.common} className="countryCard">
       <img
         className="card-img-top"
         src={cnt.flags.png}
@@ -11,7 +11,11 @@ function CountryCard({ cnt }) {
         style={{ height: 85 }}
       />
       <div className="card-body">
-        <p className={styles.card_text}>{cnt.name.common}</p>
+        <h2>
+          <span>
+            <p className="card_text">{cnt.name.common}</p>
+          </span>
+        </h2>
       </div>
     </div>
   );
