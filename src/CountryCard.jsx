@@ -3,15 +3,15 @@ import styles from "./App.module.css";
 
 function CountryCard({ cnt }) {
   return (
-    <div key={cnt.code} className={styles.countryCard}>
+    <div key={cnt.name.common} className={styles.countryCard}>
       <img
         className="card-img-top"
-        src={cnt.flag}
-        alt={cnt.abbr}
+        src={cnt.flags.png}
+        alt={cnt.name.common}
         style={{ height: 85 }}
       />
       <div className="card-body">
-        <p className={styles.card_text}>{cnt.name}</p>
+        <p className={styles.card_text}>{cnt.name.common}</p>
       </div>
     </div>
   );

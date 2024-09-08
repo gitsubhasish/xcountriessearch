@@ -15,9 +15,7 @@ function Country() {
 
   const fetchCountries = async () => {
     try {
-      const response = await axios.get(
-        "https://xcountries-backend.azurewebsites.net/all"
-      );
+      const response = await axios.get("https://restcountries.com/v3.1/all");
       setCountries(response.data);
       setFilteredCountries(response.data);
       setLoading(false);
@@ -46,11 +44,13 @@ function Country() {
     } else {
       setFilteredCountries(
         countries.filter(
-          (country) => country.name.toLowerCase().includes(text) // Flexible search with case-insensitive match
+          (country) => country.name.common.toLowerCase().includes(text) // Flexible search with case-insensitive match
         )
       );
     }
   };
+
+  console.log(filteredCountries);
 
   return (
     <>
